@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        window.setInterval(function () {
+            carregarNovoDecimal()
+        }, 1000)
+
+
+        function carregarNovoDecimal() {
+            $.ajax({
+                url: '/update_DecimalNumber',
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    $(random_decimal).replaceWith(data)
+
+                }
+            });
+        }
+    });
+</script>
+<div id="random_decimal">
+    <h1>{{ x }}</h1>
+    primeiro numero
+</div>
