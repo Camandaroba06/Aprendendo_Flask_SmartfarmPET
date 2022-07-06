@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 import numpy as np
 from requests import request
 
+
 app = Flask(__name__)
 i = 1
 random_decimal = np.random.rand()
